@@ -1,0 +1,9 @@
+id,category,query,gold chunk,baseline rank,re-ranked rank,gold in P1 context,gold in P2 context
+Q1,Keyword trap / distractor,What makes a delivery illegal because the bowler steps over the line?,Law 21.5,,,False,False
+Q2,Keyword trap / synonym,How many runs is a hit over the rope worth?,Law 19.6-19.7,9.0,7.0,False,False
+Q3,Exception / corner case,What happens to the one-run no-ball penalty if the batter is dismissed?,Law 21.11-21.14,2.0,7.0,True,False
+Q4,Exception / corner case,Can a batter be stumped after leaving the crease to dodge a ball that could hurt them?,Law 39.2-39.3,3.0,1.0,True,True
+Q5,Negation / role constraint,Can a fielder who left the field bowl as soon as they return?,Law 24.2,2.0,1.0,True,True
+Q6,Negation / constraint,Are leg byes given if the batter neither played at the ball nor tried to avoid it?,Law 23.3,1.0,2.0,True,True
+Q7,Buried at rank 4-10,How long is the break between innings?,Law 11.1-11.2,1.0,4.0,True,False
+Q8,Buried at rank 4-10,How early must the umpires be at the ground?,Law 2.1-2.3,,,False,False

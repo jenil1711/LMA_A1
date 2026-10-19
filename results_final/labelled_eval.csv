@@ -1,0 +1,55 @@
+query,baseline rank,re-ranked rank
+What makes a delivery illegal because the bowler steps over the line?,,
+How many runs is a hit over the rope worth?,9.0,7.0
+What happens to the one-run no-ball penalty if the batter is dismissed?,2.0,7.0
+Can a batter be stumped after leaving the crease to dodge a ball that could hurt them?,3.0,1.0
+Can a fielder who left the field bowl as soon as they return?,2.0,1.0
+Are leg byes given if the batter neither played at the ball nor tried to avoid it?,1.0,2.0
+How long is the break between innings?,1.0,4.0
+How early must the umpires be at the ground?,,
+Which ways of getting out are not possible on a no ball?,3.0,5.0
+What happens if the bowler throws the ball while bowling?,,
+How many people can stand behind square on the leg side?,10.0,1.0
+How wide is the strip the ball is bowled on?,2.0,3.0
+How high are the stumps?,1.0,1.0
+Who decides whether it is too wet to play?,1.0,1.0
+What gets a batter out for knocking their own stumps over?,,
+Can the captain declare the innings in any innings of the match?,1.0,1.0
+Is a short run always penalised?,1.0,1.0
+Can a replacement player bat in the innings?,1.0,1.0
+Does the pitch get rolled before every innings?,1.0,1.0
+Is it hit the ball twice if the striker hits it again to send it back to a fielder?,1.0,1.0
+Which ways of getting out apply on a wide ball?,3.0,1.0
+Can the pitch be watered during the match?,1.0,1.0
+Can a substitute fielder bowl or captain the side?,1.0,1.0
+Are drinks breaks allowed in the final hour of the match?,2.0,1.0
+Is underarm bowling banned?,1.0,1.0
+Can an umpire give a batter out without an appeal?,1.0,1.0
+Can the umpires be swapped during the match?,1.0,1.0
+Can a bowler send down two overs in a row?,4.0,2.0
+Can a wicket-keeper wear gloves with webbing between the fingers?,1.0,1.0
+Can the umpire fix the stumps straight away if the wicket is broken while the ball is live?,2.0,1.0
+How many overs must be bowled in the last hour of a match?,1.0,1.0
+After how many overs can the fielding captain ask for a new ball in a multi-day match?,1.0,1.0
+What lead is needed to enforce the follow-on in a three-day match?,1.0,1.0
+What is the maximum unserved penalty time for a fielder who left the field?,2.0,1.0
+When is a boundary six scored?,1.0,1.0
+How long does a new batter have to get ready before being timed out?,1.0,1.0
+What is the shortest allowed non-turf pitch?,1.0,1.0
+How many penalty runs for a helmet on the ground that the ball hits?,1.0,2.0
+How long before the toss may captains toss the coin at the earliest?,1.0,1.0
+What is the signal for a wide?,5.0,3.0
+What happens if the bowler keeps bowling bouncers?,,
+When can a batter be out for the ball hitting their pad?,,
+What happens if a batter deliberately hits the ball with their hand?,,
+What is the punishment for scratching the ball?,,
+What if a phone rings and distracts the batter?,3.0,5.0
+What if a dog runs onto the field and the ball hits it?,1.0,1.0
+When is a batter allowed someone to run for them?,8.0,1.0
+How is a match decided if both teams score the same?,3.0,10.0
+How are overs lost to a rain delay in the last hour worked out?,1.0,1.0
+Can the captain change the bat or field decision after the toss?,1.0,1.0
+What if the ball gets stuck in a batter's clothing?,1.0,2.0
+What if the bowler's trousers fall down and hit the stumps?,7.0,3.0
+When can the non-striker be run out for backing up too far?,4.0,1.0
+What parts of the body can a fielder use to stop the ball?,1.0,1.0

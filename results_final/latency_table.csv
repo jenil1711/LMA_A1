@@ -1,0 +1,4 @@
+,mean (ms),std (ms),median (ms)
+Pipeline 1 (baseline retrieval),7.9,0.5,7.9
+Pipeline 2 (retrieval + re-ranking),102.5,10.7,101.8
+Cross-Encoder re-ranking only,94.6,10.6,93.9

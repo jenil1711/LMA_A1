@@ -1,0 +1,274 @@
+{
+  "config": {
+    "bi_encoder": "sentence-transformers/all-MiniLM-L6-v2",
+    "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "llm": "Qwen/Qwen2.5-3B-Instruct",
+    "top_k": 10,
+    "top_n": 3,
+    "n_chunks": 265
+  },
+  "stress": [
+    {
+      "id": "Q1",
+      "category": "Keyword trap / distractor",
+      "query": "What makes a delivery illegal because the bowler steps over the line?",
+      "gold": [
+        "Law 21.5"
+      ],
+      "expected": "Law 21.5.2: the front foot must land with some part on the correct side of the line joining the middle stumps and behind the popping crease, otherwise it is a No ball. Traps: Law 21.5.1 (back foot and return crease) and Law 21.6 (bowler breaking the wicket) also talk about the bowler's feet and No ball.",
+      "baseline_rank": null,
+      "reranked_rank": null,
+      "full_bi_rank": 14,
+      "p1_context": [
+        "Law 21.3-21.5",
+        "Law 41.5-41.6",
+        "Law 41.7"
+      ],
+      "p2_context": [
+        "Law 21.1",
+        "Law 41.7",
+        "Law 20.4"
+      ],
+      "answer_1": "The provided context does not answer this question.",
+      "answer_2": "The provided context does not answer this question.",
+      "gen_s_1": 0.22,
+      "gen_s_2": 0.21
+    },
+    {
+      "id": "Q2",
+      "category": "Keyword trap / synonym",
+      "query": "How many runs is a hit over the rope worth?",
+      "gold": [
+        "Law 19.6-19.7"
+      ],
+      "expected": "Law 19.6.2: unless the umpires and captains decide otherwise, 6 runs for a Boundary 6 and 4 runs for a Boundary 4. The Laws say 'boundary' where the question says 'rope', so the vocabulary does not overlap.",
+      "baseline_rank": 9,
+      "reranked_rank": 7,
+      "full_bi_rank": 9,
+      "p1_context": [
+        "Law 34.4-34.5",
+        "Law 25.6",
+        "Law 38.5-38.6"
+      ],
+      "p2_context": [
+        "Law 22.7-22.9",
+        "Law 34.4-34.5",
+        "Law 21.15-21.17"
+      ],
+      "answer_1": "The provided context does not answer this question.",
+      "answer_2": "The provided context does not answer this question.",
+      "gen_s_1": 0.22,
+      "gen_s_2": 0.4
+    },
+    {
+      "id": "Q3",
+      "category": "Exception / corner case",
+      "query": "What happens to the one-run no-ball penalty if the batter is dismissed?",
+      "gold": [
+        "Law 21.11-21.14"
+      ],
+      "expected": "Law 21.14: the one-run penalty stands even if a batter is dismissed, unless the No ball call is revoked.",
+      "baseline_rank": 2,
+      "reranked_rank": 7,
+      "full_bi_rank": 2,
+      "p1_context": [
+        "Law 21.15-21.17",
+        "Law 21.11-21.14",
+        "Law 18.8"
+      ],
+      "p2_context": [
+        "Law 18.8",
+        "Law 38.5-38.6",
+        "Law 35.2-35.3"
+      ],
+      "answer_1": "If a batter is dismissed, the one-run no-ball penalty shall stand even if a batter is dismissed. It shall be in addition to any other runs scored, any boundary allowance and any other runs awarded for penalties. [Law 21.17]",
+      "answer_2": "According to Law 35.3, if the batter is dismissed while hit wicket, only the one-run penalty for a wide is awarded, and no additional 5-run penalty is given. [Law 35.3]",
+      "gen_s_1": 1.07,
+      "gen_s_2": 0.98
+    },
+    {
+      "id": "Q4",
+      "category": "Exception / corner case",
+      "query": "Can a batter be stumped after leaving the crease to dodge a ball that could hurt them?",
+      "gold": [
+        "Law 39.2-39.3"
+      ],
+      "expected": "Law 39.3.1: no. The striker is not out Stumped if, after receiving the delivery, they left their ground in order to avoid injury.",
+      "baseline_rank": 3,
+      "reranked_rank": 1,
+      "full_bi_rank": 3,
+      "p1_context": [
+        "Law 39.1",
+        "Law 25.6-25.7",
+        "Law 39.2-39.3"
+      ],
+      "p2_context": [
+        "Law 39.2-39.3",
+        "Law 39.1",
+        "Law 25.6-25.7"
+      ],
+      "answer_1": "No, a batter cannot be stumped after leaving their ground to avoid injury [Law 39.3.1].",
+      "answer_2": "No, a batter cannot be stumped after leaving their ground to avoid injury [Law 39.3.1]. However, if the batter leaves their ground to dodge injury and is not out stumped, they can still be out run out [Law 39.3.2].",
+      "gen_s_1": 0.53,
+      "gen_s_2": 1.22
+    },
+    {
+      "id": "Q5",
+      "category": "Negation / role constraint",
+      "query": "Can a fielder who left the field bowl as soon as they return?",
+      "gold": [
+        "Law 24.2"
+      ],
+      "expected": "Law 24.2.2.3: no. The fielder may not bowl until they have been back on the field for the Penalty time (maximum 90 minutes, Law 24.2.3).",
+      "baseline_rank": 2,
+      "reranked_rank": 1,
+      "full_bi_rank": 2,
+      "p1_context": [
+        "Law 24.2",
+        "Law 24.2",
+        "Law 24.3-24.4"
+      ],
+      "p2_context": [
+        "Law 24.2",
+        "Law 24.2",
+        "Law 24.3-24.4"
+      ],
+      "answer_1": "No, a fielder cannot bowl immediately upon returning to the field. They must serve their Penalty time, which is a maximum of 90 minutes [Law 24.2.3]. Only after serving this time can they bowl again [Law 24.2.5].",
+      "answer_2": "No, a fielder cannot bowl immediately upon returning to the field. According to Law 24.2.5, the player shall not bowl until all of their Penalty time has been served. This means the fielder must wait for the specified Penalty time to be completed before they can bowl again. [Law 24.2.5]",
+      "gen_s_1": 1.21,
+      "gen_s_2": 1.44
+    },
+    {
+      "id": "Q6",
+      "category": "Negation / constraint",
+      "query": "Are leg byes given if the batter neither played at the ball nor tried to avoid it?",
+      "gold": [
+        "Law 23.3"
+      ],
+      "expected": "Law 23.3: no. Leg byes are not awarded; all runs are disallowed, any not out batter returns to their original end, and any applicable 5-run penalty still applies.",
+      "baseline_rank": 1,
+      "reranked_rank": 2,
+      "full_bi_rank": 1,
+      "p1_context": [
+        "Law 23.3",
+        "Law 23.1-23.2",
+        "Law 23.2"
+      ],
+      "p2_context": [
+        "Law 23.1-23.2",
+        "Law 23.3",
+        "Law 28.3"
+      ],
+      "answer_1": "According to Law 23.2.1, if the umpire is not satisfied that the striker has either attempted to play the ball with the bat or tried to avoid being hit by the ball, then leg byes shall not be awarded. [Law 23.2.1]",
+      "answer_2": "Yes, according to Law 23.2.2, if the umpire is satisfied that the batter did not attempt to play the ball with the bat or try to avoid being hit by the ball, then leg byes shall not be awarded [Law 23.2.2].",
+      "gen_s_1": 1.23,
+      "gen_s_2": 1.22
+    },
+    {
+      "id": "Q7",
+      "category": "Buried at rank 4-10",
+      "query": "How long is the break between innings?",
+      "gold": [
+        "Law 11.1-11.2"
+      ],
+      "expected": "Law 11.2.2: 10 minutes, from the close of an innings until the call of Play (with adjustments in Laws 11.3, 11.5 and 11.6).",
+      "baseline_rank": 1,
+      "reranked_rank": 4,
+      "full_bi_rank": 1,
+      "p1_context": [
+        "Law 11.1-11.2",
+        "Law 11.6",
+        "Law 12.7-12.8"
+      ],
+      "p2_context": [
+        "Law 11.3",
+        "Law 11.6",
+        "Law 11.3"
+      ],
+      "answer_1": "The break between innings is 10 minutes, commencing from the close of an innings until the call of Play for the start of the next innings. [Law 11.2.2]",
+      "answer_2": "The break between innings is 10 minutes unless specified otherwise by the laws. [Law 11.3] specifies that if an innings ends with less than 10 minutes remaining, the interval can be extended. However, the standard duration is 10 minutes.",
+      "gen_s_1": 0.85,
+      "gen_s_2": 1.13
+    },
+    {
+      "id": "Q8",
+      "category": "Buried at rank 4-10",
+      "query": "How early must the umpires be at the ground?",
+      "gold": [
+        "Law 2.1-2.3"
+      ],
+      "expected": "Law 2.1: the umpires must be on the ground and report to the Executive at least 45 minutes before the scheduled start of each day's play.",
+      "baseline_rank": null,
+      "reranked_rank": null,
+      "full_bi_rank": 21,
+      "p1_context": [
+        "Law 2.8",
+        "Law 30.1-30.2",
+        "Law 10.1-10.3"
+      ],
+      "p2_context": [
+        "Law 28.2-28.3",
+        "Law 13.4-13.5",
+        "Law 9.3"
+      ],
+      "answer_1": "The provided context does not answer this question.",
+      "answer_2": "The umpires must be at the ground no later than 15 minutes before the scheduled start time of the match [Law 13.4-13.5].",
+      "gen_s_1": 0.22,
+      "gen_s_2": 0.74
+    }
+  ],
+  "counter_examples": [
+    {
+      "id": "L1",
+      "category": "Re-ranker may demote (abstract negated question)",
+      "query": "Which ways of getting out are not possible on a no ball?",
+      "gold": [
+        "Law 21.15-21.17"
+      ],
+      "expected": "Law 21.17: on a No ball neither batter can be out except Hit the ball twice (34), Obstructing the field (37) or Run out (38).",
+      "baseline_rank": 3,
+      "reranked_rank": 5,
+      "full_bi_rank": 3,
+      "p1_context": [
+        "Law 38.3",
+        "Law 21.7-21.8",
+        "Law 21.15-21.17"
+      ],
+      "p2_context": [
+        "Law 38.3",
+        "Law 37.1-37.3",
+        "Law 38.3-38.4"
+      ],
+      "answer_1": "According to Law 21.17, when a no ball is called, neither batter can be out under any of the Laws except for 34 (Hit the ball twice), 37 (Obstructing the field) or 38 (Run out). [Law 21.17]",
+      "answer_2": "The provided context does not answer this question.",
+      "gen_s_1": 1.29,
+      "gen_s_2": 0.21
+    },
+    {
+      "id": "L2",
+      "category": "Recall ceiling (gold chunk may never reach the Top 10)",
+      "query": "What happens if the bowler throws the ball while bowling?",
+      "gold": [
+        "Law 21.3"
+      ],
+      "expected": "Law 21.3: No ball is called and the bowler gets a first and final warning; a further thrown delivery in that innings means suspension from bowling for the rest of the innings.",
+      "baseline_rank": null,
+      "reranked_rank": null,
+      "full_bi_rank": 27,
+      "p1_context": [
+        "Law 38.3",
+        "Law 21.6-21.7",
+        "Law 41.8"
+      ],
+      "p2_context": [
+        "Law 38.3",
+        "Law 17.8",
+        "Law 21.3"
+      ],
+      "answer_1": "According to Law 38.3.1, if the non-striker is out of their ground at any time from the moment the ball comes into play until the moment the bowler's arm reaches the highest point of their normal bowling action, the non-striker can be out Run out if the ball breaks the wicket. Therefore, if the bowler throws the ball while bowling, it could potentially put the non-striker out if they are out of their ground at that moment. [Law 38.3.1]",
+      "answer_2": "According to Law 21.3, if either umpire considers that a further delivery by the same bowler is thrown underarm, they shall call and signal No Ball. This results in the bowler being suspended from bowling immediately and the over being completed by another bowler. [Law 21.3]",
+      "gen_s_1": 2.18,
+      "gen_s_2": 1.29
+    }
+  ]
+}
